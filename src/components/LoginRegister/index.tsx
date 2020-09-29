@@ -7,7 +7,7 @@ import{
 function LoginRegister(){
     return(
         <Register>
-            <a href="" >Cadastre-se</a>
+            <a href="/#">Cadastre-se</a>
         </Register>
     )
 }

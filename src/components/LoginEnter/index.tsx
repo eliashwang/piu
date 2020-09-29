@@ -4,10 +4,14 @@ import{
     Enter
 } from './styles';
 
-function LoginEnter(){
+interface ReactProps{
+    onClick(e: any): void
+}
+
+const LoginEnter: React.FC<ReactProps> = ({onClick}) => {
     return(
-        <Enter>
-            <a href="">Entrar</a>
+        <Enter onClick={onClick}>
+            <a href="/#">Entrar</a>
         </Enter>
     )
 }

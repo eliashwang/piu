@@ -8,8 +8,13 @@ export const LastTweet = styled.div`
     align-items: center;
 
     .foto-de-perfil{
+        width: 80px;
         height: 80px;
-        margin: 0 15px 0 15px;
+        border-radius: 50%;
+
+        object-fit: cover;
+
+        margin: 15px;
     }
 
     .tweet-except-profile-img{

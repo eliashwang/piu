@@ -16,11 +16,11 @@ function ComponentShareTweet(){
                 <textarea placeholder="O que deseja compartilhar?"/>
                 <div className="emote-photo-send">
                     <nav className="emote-photo">
-                        <a href=""><img src={logoEmote} alt="Emoticons"/></a>
-                        <a href=""><img src={logoPhoto} alt="Fotos, Vídeos e Gifs"/></a>
+                        <a href="/#"><img src={logoEmote} alt="Emoticons"/></a>
+                        <a href="/#"><img src={logoPhoto} alt="Fotos, Vídeos e Gifs"/></a>
                     </nav>
                     <nav className="send">
-                        <a href="">Enviar</a>
+                        <a href="/#">Enviar</a>
                     </nav>
                 </div>
             </div>

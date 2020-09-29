@@ -46,7 +46,6 @@ export const Header = styled.header`
     }
 
     @media (min-width: 800px){
-
         height: 60px;
 
         .logo{

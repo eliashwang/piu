@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
-export const Enter = styled.div`
+export const Enter = styled.button`
     background-color: #FCA311;
     width: 150px;
     height: 30px;
 
     text-align: center;
     font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
     font-weight: bold;
 
     display: flex;
