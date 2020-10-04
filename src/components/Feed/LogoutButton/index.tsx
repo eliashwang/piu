@@ -4,7 +4,7 @@ import{
     Logout
 } from './styles';
 
-import logoLogout from '../../assets/images/logout.svg';
+import logoLogout from '../../../assets/images/logout.svg';
 
 interface ReactProps{
     onClick(e: any): void

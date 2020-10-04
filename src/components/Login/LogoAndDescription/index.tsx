@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logoPiupiuwer from '../../assets/images/logo-piupiuwer.svg';
+import logoPiupiuwer from  '../../../assets/images/logo-piupiuwer.svg';
 
 import{
     LogoDescription

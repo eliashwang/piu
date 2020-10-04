@@ -5,12 +5,12 @@ import{
 } from './styles';
 
 import LogoutButton from '../LogoutButton';
-import { useAuth } from '../../hooks/useAuth';
+import { useAuth } from '../../../hooks/useAuth';
 
-import logoPiupiuwer from '../../assets/images/logo-piupiuwer.svg';
-import logoHome from '../../assets/images/home.svg';
-import logoProfile from '../../assets/images/profile.svg';
-import logoConfig from '../../assets/images/config.svg';
+import logoPiupiuwer from '../../../assets/images/logo-piupiuwer.svg';
+import logoHome from '../../../assets/images/home.svg';
+import logoProfile from '../../../assets/images/profile.svg';
+import logoConfig from '../../../assets/images/config.svg';
 
 function PageHeader(){
     const { logout } = useAuth();

@@ -1,10 +1,10 @@
 import React, {useState, useCallback} from 'react';
 
-import LoginPicture from '../../components/LoginPicture';
-import LogoAndDescription from '../../components/LogoAndDescription';
-import LoginInput from '../../components/LoginInput';
-import LoginEnter from '../../components/LoginEnter';
-import LoginRegister from '../../components/LoginRegister';
+import LoginPicture from '../../components/Login/LoginPicture';
+import LogoAndDescription from '../../components/Login/LogoAndDescription';
+import LoginInput from '../../components/Login/LoginInput';
+import LoginEnter from '../../components/Login/LoginEnter';
+import LoginRegister from '../../components/Login/LoginRegister';
 
 import {useAuth} from '../../hooks/useAuth';
 
@@ -15,22 +15,27 @@ import{
 function Login(){
     const { login } = useAuth()
 
+    const [countLogin, setCountLogin] = useState(0);
+    const [countPw, setCountPw] = useState(0);
+
     const [cred, setCred] = useState({
         username: '',
-        password: ''
+        password: '',
     });
 
     const handleLogin = useCallback(e => {
         e.preventDefault()
-        login(cred);
+        login(cred, countLogin, countPw);
     }, [cred, login]);
 
     const onChangeUsername = useCallback(e => {
         setCred({...cred, username: e.target.value})
+        setCountLogin(e.target.value.length)
     }, [setCred, cred]);
 
     const onChangePassword = useCallback(e => {
         setCred({...cred, password: e.target.value})
+        setCountPw(e.target.value.length)
     }, [setCred, cred]);
 
     return (

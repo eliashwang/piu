@@ -8,11 +8,11 @@ export const LastTweet = styled.div`
     align-items: center;
 
     .foto-de-perfil{
-        width: 80px;
-        height: 80px;
+        width: 64px;
+        height: 64px;
         border-radius: 50%;
 
-        object-fit: cover;
+        object-fit: contain;
 
         margin: 15px;
     }
@@ -37,20 +37,13 @@ export const LastTweet = styled.div`
     .tweet-except-profile-img .name-login-exclude .name-login strong{
         font-size: 16px;
         font-weight: bold;
-        margin-right: 7px;
+        margin-right: 5px;
+        
     }
 
     .tweet-except-profile-img .name-login-exclude .name-login span{ 
         font-weight: 600;
         font-size: 12px;
-    }
-
-    .tweet-except-profile-img .name-login-exclude input{
-        height: 9px;
-
-        &:focus{
-            outline: none;
-        }
     }
 
     .tweet-except-profile-img .message{
@@ -81,6 +74,7 @@ export const LastTweet = styled.div`
         height: 150px;
 
         .foto-de-perfil{
+            width: 120px;
             height: 120px;
             margin: 0 30px 0 30px;
         }
@@ -91,15 +85,11 @@ export const LastTweet = styled.div`
 
         .tweet-except-profile-img .name-login-exclude .name-login strong{
             font-size: 21px;
-            margin-right: 12px;
+            margin-right: 8px;
         }
 
         .tweet-except-profile-img .name-login-exclude .name-login span{ 
             font-size: 15px;
-        }
-
-        .tweet-except-profile-img .name-login-exclude input{
-            height: 12px;
         }
 
         .tweet-except-profile-img .message{

@@ -9,6 +9,7 @@ export const Logout = styled.button`
 
     &:hover{
         outline: none;
+        cursor: pointer;
     }
 
     @media (min-width: 800px){

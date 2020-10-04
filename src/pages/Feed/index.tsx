@@ -8,10 +8,10 @@ import{
 
 import { useAuth } from '../../hooks/useAuth';
 
-import PageHeader from '../../components/PageHeader';
-import ComponentShareTweet from '../../components/ContainerShareTweet';
-import LastTweetsHeader from '../../components/LastTweetsHeader';
-import ContainerLastTweet from '../../components/ContainerLastTweet';
+import PageHeader from '../../components/Feed/PageHeader';
+import ComponentShareTweet from '../../components/Feed/ContainerShareTweet';
+import LastTweetsHeader from '../../components/Feed/LastTweetsHeader';
+import ContainerLastTweet from '../../components/Feed/ContainerLastTweet';
 
 export interface CadaPiu{
     favoritado_por: Array<object>;
@@ -33,16 +33,15 @@ export interface Usuario{
 }
 
 function Feed(){
-    const [piu, setPiu] = useState([]);
+    const [pius, setPius] = useState([]);
 
     const { token } = useAuth();
-
+      
     useEffect(() => {
         api.defaults.headers.authorization = `JWT ${token}`
 
         api.get('/pius/').then(response => {
-            console.log(response.data);
-            setPiu(response.data)
+            setPius(response.data)
         });       
 
     }, [token]);
@@ -53,8 +52,8 @@ function Feed(){
             <ComponentShareTweet/>
             <LastTweets>
                 <LastTweetsHeader/>
-                {piu.map((cadapiu: CadaPiu) => {
-                    return <ContainerLastTweet key={cadapiu.id} cadapiu={cadapiu}/>;
+                {pius.map((cadapiu: CadaPiu) => {
+                    return <ContainerLastTweet key={cadapiu.id} cadapiu={cadapiu} setPius={setPius} pius={pius}/>;
                 })}
             </LastTweets>
         </div>

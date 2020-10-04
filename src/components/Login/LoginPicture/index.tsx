@@ -1,6 +1,6 @@
 import React from 'react';
 
-import imageLogin from '../../assets/images/image-login.svg';
+import imageLogin from '../../../assets/images/image-login.svg';
 
 import{
     PageLeft

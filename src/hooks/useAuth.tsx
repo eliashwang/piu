@@ -2,14 +2,24 @@ import React, {createContext, useCallback, useContext, useState} from 'react';
 
 import api from '../services/api';
 
+export interface User{
+    username: string;
+    first_name: string;
+    last_name: string;
+    foto: string;
+    id: number;
+    pius: [];
+    email: string;
+}
+
 interface AuthState{
     token: string;
-    user: object;
+    user: User;
 }
 
 interface AuthContextData{
-    user: object;
-    login(user: object): void;
+    user: User;
+    login(user: object, countLogin: number, countPw: number): void;
     logout(): void;
     token: string;
 }
@@ -30,7 +40,7 @@ export const AuthProvider: React.FC = ({ children }) => {
         return {} as AuthState;
     });
 
-    const login = useCallback(async (cred) => {
+    const login = useCallback(async (cred, countLogin, countPw) => {
 
         try{
             const response = await api.post('/login/', cred)
@@ -46,7 +56,13 @@ export const AuthProvider: React.FC = ({ children }) => {
             }
         }
         catch{
-            alert("Usuário ou senha incorreto");
+            if(countLogin === 0 || countPw === 0){
+                alert("Usuário e/ou senha não pode(m) estar vazio(s)!")
+            }
+
+            else{
+                alert("Usuário e/ou senha incorreto(s)!");
+            }
         }
 
     }, [])
