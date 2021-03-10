@@ -25,8 +25,9 @@ function Login(){
 
     const handleLogin = useCallback(e => {
         e.preventDefault()
+        console.log(login);
         login(cred, countLogin, countPw);
-    }, [cred, login]);
+    }, [countLogin, countPw, cred, login]);
 
     const onChangeUsername = useCallback(e => {
         setCred({...cred, username: e.target.value})
